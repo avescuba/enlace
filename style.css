@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+:root {
+    --color-contenedor-claro: #E0F7FA;
+    --color-contenedor-oscuro: #B2EBF2;
+    --color-gris: #424242;
+    --color-azul-suave: #64B5F6;
+    --color-azul-duro: #2196F3;
+}
+
+.contenedor {
+    background: linear-gradient(to bottom, var(--color-contenedor-claro), var(--color-contenedor-oscuro));
+    padding: 1px;
+}
+.contenedors{
+    max-height: 200px;
+    overflow-y: auto;
+}
+#prefilledLink {
+    max-height: 200px;
+    overflow-y: auto;
+}
+a {
+    all: unset !important;
+    display: flex!important;
+    justify-content: center!important;
+    background-color: red!important;
+}
+.contenedor-interno{
+    font-size: small!important;
+}
+/* Efecto hover */
+.contenedor-interno:hover {
+    /* Cambia el color del texto al pasar el cursor */
+    background-color: green!important;
+    cursor: pointer!important;
+    transform: scale(.92)!important;
+    color: white!important;
+    /* Fondo ligeramente transparente */
+}
+.contenedor-interno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; /* Asegura que el contenido no se salga del contenedor */
+}
+.truncate-text {
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto que no cabe */
+    text-overflow: ellipsis; /* Añade "..." cuando el texto se corta */
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+    margin-right: 5px; /* Espacio entre el texto y el icono */
+    transition: all 0.3s ease; /* Suaviza la transición */
+}
+.contenedor-interno:hover .truncate-text {
+    white-space: normal; /* Permite que el texto se divida en varias líneas */
+    overflow: visible; /* Muestra todo el texto */
+    text-overflow: unset; /* Quita los "..." */
+}
+
